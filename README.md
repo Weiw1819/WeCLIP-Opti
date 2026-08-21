@@ -1,10 +1,3 @@
-## Frozen CLIP: A Strong Backbone for Weakly Supervised Semantic Segmentation (CVPR 2024 Highlight)
-
-Code of CVPR 2024 paper: Frozen CLIP: A Strong Backbone for Weakly Supervised Semantic Segmentation.
-
-[[Paper]](https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Frozen_CLIP_A_Strong_Backbone_for_Weakly_Supervised_Semantic_Segmentation_CVPR_2024_paper.pdf) [[Project]](https://github.com/zbf1991/WeCLIP) 
-
-
 This Project heavily relies on the [[AFA]](https://github.com/rulixiang/afa) and [[CLIP-ES]](https://github.com/linyq2117/CLIP-ES). Many thanks for their great work!
 ## Preparations
 
