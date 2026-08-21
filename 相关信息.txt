@@ -1,0 +1,21 @@
+
+
+• 已完成 GPU 利用率优化，主要修改了：
+
+  - DataLoader 启用 pin_memory、预取和持久 worker。
+  - CPU→GPU 使用异步 non_blocking 传输。
+  - 移除每轮 .item() 导致的 GPU 强制同步。
+  - PAR 从逐图串行改为整个 batch 并行。
+  - CAM 归一化和上采样改为 GPU 执行。
+  - 避免训练阶段重复读取分割标签 PNG。
+  - 启用 cuDNN benchmark 和 RTX A6000 的 TF32。
+  - optimizer.zero_grad(set_to_none=True) 降低清零开销。
+  - 保持原 batch size 和损失定义不变。
+
+  涉及文件：
+
+  - scripts/dist_clip_voc.py:35
+  - WeCLIP_model/model_attn_aff_voc.py:52
+  - clip/clip_tool.py:107
+
+  
